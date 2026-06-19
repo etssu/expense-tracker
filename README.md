@@ -54,4 +54,7 @@ chmod +x expense-tracker
    mvn exec:java -Dexec.mainClass="com.expense_tracker.App" -Dexec.args="list"
    ```
 
+## Project URL
+
+Repository: https://github.com/etssu/expense-tracker
 
