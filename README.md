@@ -13,9 +13,9 @@ A small Java application designed for tracking and managing your finances.
 
 ## 🛠 Tech Stack
 
-*   **Language:** Java (JDK 25 or higher)
+*   **Language:** Java 17 or higher
 *   **Libraries:** Google Gson (for JSON handling)
-*   **Build Tool:** Maven
+*   **Build Tool:** Maven 3.8.7
 
 
 ## 📦 Installation & Setup
@@ -25,29 +25,33 @@ A small Java application designed for tracking and managing your finances.
    git clone https://github.com/etssu/expense-tracker.git
    cd expense-tracker
 ```
-2. Build the project:
+### 🚀 Run with CLI wrapper (recommended)
+
+For easier usage, a wrapper script is provided.
+
+#### Make it executable (Linux / Git Bash / WSL)
+```bash
+chmod +x expense-tracker
+```
+#### Run the application:
+```bash
+./expense-tracker list
+./expense-tracker add --description "Lunch" --amount 20
+./expense-tracker update --amount 30 --id 2
+./expense-tracker summary --month 5
+```
+
+### 🛠 Alternative: Run with Maven
+
+1. Build the project:
    This will download dependencies (Gson) and compile the source code:
    ```
    mvn clean compile
    ```
-3. Run the application:
+2. Run the application:
    You can run it using Maven's exec plugin:
    ```
-   mvn exec:java -Dexec.mainClass="Main" -Dexec.args="list"
+   mvn exec:java -Dexec.mainClass="com.expense_tracker.App" -Dexec.args="list"
    ```
 
-
-## Usage Examples
-1. Add a new expense
-   ```
-   mvn exec:java -Dexec.mainClass="Main" -Dexec.args="add --description "Lunch" --amount 20"
-   ```
-2. Update an expense
-   ```
-   mvn exec:java -Dexec.mainClass="Main" -Dexec.args="update --amount 30 --id 2"
-   ```
-3. May Summary
-   ```
-   mvn exec:java -Dexec.mainClass="Main" -Dexec.args="summary --month 5"
-   ```
 
