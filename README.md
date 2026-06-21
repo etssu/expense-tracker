@@ -1,6 +1,7 @@
 # Expense Tracker
 
 A small Java application designed for tracking and managing your finances.
+Inspired from the [Expense Tracker](https://roadmap.sh/projects/expense-tracker) project featured from [roadmap.sh](https://roadmap.sh/dashboard).
 
 ## Features
 
